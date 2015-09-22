@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nobedrock",
+  "name": "No Bedrock",
+  "description": "Allows you to replace bedrock in your world with another block such as stone.",
+  "version": "2.0.0.1",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["The_Fireplace"],
+  "credits": "The_Fireplace for authoring",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
