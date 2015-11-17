@@ -1,4 +1,4 @@
-package the_fireplace.nobedrock.config;
+package the_fireplace.bedrockreplacer.config;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.client.IModGuiFactory;
 /**
  * @author The_Fireplace
  */
-public class NoBedrockGuiFactory implements IModGuiFactory {
+public class BRGuiFactory implements IModGuiFactory {
 
 	@Override
 	public void initialize(Minecraft minecraftInstance) {
@@ -17,7 +17,7 @@ public class NoBedrockGuiFactory implements IModGuiFactory {
 
 	@Override
 	public Class<? extends GuiScreen> mainConfigGuiClass() {
-		return NoBedrockConfigGui.class;
+		return BRConfigGui.class;
 	}
 
 	@Override

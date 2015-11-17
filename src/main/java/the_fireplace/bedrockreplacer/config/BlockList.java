@@ -1,4 +1,4 @@
-package the_fireplace.nobedrock.config;
+package the_fireplace.bedrockreplacer.config;
 
 import java.util.Map;
 

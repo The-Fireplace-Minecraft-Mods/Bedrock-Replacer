@@ -1,0 +1,6 @@
+replacewith=Replace Bedrock With:
+replacewith.tooltip=The block id to replace Bedrock with.
+riskyblocks=Enable Risky Blocks
+riskyblocks.tooltip=Enables blocks showing in the config that might crash the game if used to replace bedrock.
+enablelitemode=Enable Lite Mode
+enablelitemode.tooltip=Enables Lite Mode. It is intended for weaker computers, and does a one-time replacement of bedrock, change cannot be reverted.
