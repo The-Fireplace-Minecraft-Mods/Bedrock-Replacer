@@ -66,7 +66,7 @@ public class BedrockReplacer {
 			if(!name.contains("tile.") && !name.contains(".name"))
 				if(BRConfigValues.RISKYBLOCKS)
 					BlockList.entries.put(id, name);
-				else if(Block.getBlockFromName(id).isOpaqueCube())
+				else if(Block.getBlockFromName(id).isOpaqueCube() && Block.getBlockFromName(id).isCollidable() && !Block.getBlockFromName(id).hasTileEntity())
 					BlockList.entries.put(id, name);
 		}
 	}
