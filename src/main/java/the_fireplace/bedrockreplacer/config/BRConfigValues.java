@@ -7,7 +7,7 @@ public class BRConfigValues {
 	public static final boolean RISKYBLOCKS_DEFAULT = false;
 	public static boolean RISKYBLOCKS;
 	public static final String RISKYBLOCKS_NAME = "riskyblocks";
-	public static final boolean ENABLELITEMODE_DEFAULT = false;
-	public static boolean ENABLELITEMODE = true;//
-	public static final String ENABLELITEMODE_NAME = "enablelitemode";
+	public static final int[] DIMENSIONS_DEFAULT = new int[]{};
+	public static int[] DIMENSIONS;
+	public static final String DIMENSIONS_NAME = "disabledindimensions";
 }

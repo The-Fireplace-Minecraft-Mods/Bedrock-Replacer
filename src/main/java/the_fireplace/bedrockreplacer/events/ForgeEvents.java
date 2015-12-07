@@ -5,14 +5,21 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import the_fireplace.bedrockreplacer.BedrockReplacer;
 import the_fireplace.bedrockreplacer.config.BRConfigValues;
 
-public class LiteForgeEvents {
-	@SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
+public class ForgeEvents {
+	@SubscribeEvent
 	public void onEvent(PopulateChunkEvent.Pre event)
 	{
+		for(int dim:BRConfigValues.DIMENSIONS) {
+			if (event.world.provider.getDimensionId() == dim) {
+				System.out.println(dim);
+				return;
+			}
+		}
 		Chunk chunk = event.world.getChunkFromChunkCoords(event.chunkX, event.chunkZ);
 		Block fromBlock = Blocks.bedrock;
 		Block toBlock;
@@ -27,7 +34,7 @@ public class LiteForgeEvents {
 			{
 				for (int x = 0; x < 16; x++)
 				{
-					for (int y = 0; y < 16; y++)//256 was in the initial code, it gave an IndexOutOfBoundsException. This seems to work.
+					for (int y = 0; y < 16; y++)
 					{
 						for (int z = 0; z < 16; z++)
 						{
@@ -43,5 +50,11 @@ public class LiteForgeEvents {
 			}
 		}
 		chunk.setModified(true);
+	}
+
+	@SubscribeEvent
+	public void configChanged(ConfigChangedEvent event){
+		if(event.modID == BedrockReplacer.MODID)
+			BedrockReplacer.syncConfig();
 	}
 }
