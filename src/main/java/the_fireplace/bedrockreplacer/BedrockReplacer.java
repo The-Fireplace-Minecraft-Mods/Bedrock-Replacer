@@ -34,9 +34,8 @@ public class BedrockReplacer {
 		BRConfigValues.REPLACEWITH = REPLACEWITH_PROPERTY.getString();
 		BRConfigValues.RISKYBLOCKS = RISKYBLOCKS_PROPERTY.getBoolean();
 		BRConfigValues.DIMENSIONS = DIMENSIONS_PROPERTY.getIntList();
-		if(file.hasChanged()){
+		if(file.hasChanged())
 			file.save();
-		}
 	}
 
 	@EventHandler

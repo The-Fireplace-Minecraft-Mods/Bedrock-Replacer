@@ -14,12 +14,9 @@ public class ForgeEvents {
 	@SubscribeEvent
 	public void onEvent(PopulateChunkEvent.Pre event)
 	{
-		for(int dim:BRConfigValues.DIMENSIONS) {
-			if (event.world.provider.getDimensionId() == dim) {
-				System.out.println(dim);
+		for(int dim:BRConfigValues.DIMENSIONS)
+			if (event.world.provider.getDimensionId() == dim)
 				return;
-			}
-		}
 		Chunk chunk = event.world.getChunkFromChunkCoords(event.chunkX, event.chunkZ);
 		Block fromBlock = Blocks.bedrock;
 		Block toBlock;
