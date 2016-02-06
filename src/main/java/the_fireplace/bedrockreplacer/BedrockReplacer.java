@@ -16,11 +16,11 @@ import the_fireplace.bedrockreplacer.config.BRConfigValues;
 import the_fireplace.bedrockreplacer.config.BlockList;
 import the_fireplace.bedrockreplacer.events.ForgeEvents;
 
-@Mod(modid=BedrockReplacer.MODID, name=BedrockReplacer.MODNAME, version=BedrockReplacer.VERSION, acceptedMinecraftVersions = "1.8.8", guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated=true)
+@Mod(modid=BedrockReplacer.MODID, name=BedrockReplacer.MODNAME, version=BedrockReplacer.VERSION, acceptedMinecraftVersions = "1.8.8,1.8.9", guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated=true)
 public class BedrockReplacer {
 	public static final String MODID = "bedrockreplacer";
 	public static final String MODNAME = "Bedrock Replacer";
-	public static final String VERSION = "3.0.1.0";
+	public static final String VERSION = "4.0.1.0";
 	public static final String curseCode = "237108-bedrock-replacer";
 	@Mod.Instance(BedrockReplacer.MODID)
 	public static BedrockReplacer instance;
