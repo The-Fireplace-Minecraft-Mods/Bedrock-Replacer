@@ -23,7 +23,7 @@ allprojects {
 curseforge {
   apiKey = project.curseForgeApiKey
   project {
-    id = '231078'
+    id = '237108'
     changelog = file('changelog.txt')
     releaseType = 'release'
 	addGameVersion '1.8.9'
