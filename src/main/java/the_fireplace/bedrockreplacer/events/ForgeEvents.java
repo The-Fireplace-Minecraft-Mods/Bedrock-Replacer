@@ -51,7 +51,7 @@ public class ForgeEvents {
 
 	@SubscribeEvent
 	public void configChanged(ConfigChangedEvent event){
-		if(event.modID == BedrockReplacer.MODID)
+		if(event.modID.equals(BedrockReplacer.MODID))
 			BedrockReplacer.syncConfig();
 	}
 }

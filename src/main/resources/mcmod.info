@@ -3,7 +3,7 @@
   "modid": "bedrockreplacer",
   "name": "Bedrock Replacer",
   "description": "Allows you to replace bedrock in your world with another block such as stone.",
-  "version": "4.0.1.0",
+  "version": "4.0.1.BUILDNUMBER",
   "mcversion": "1.8.8,1.8.9",
   "url": "http://goo.gl/bIxraI",
   "updateUrl": "http://goo.gl/bIxraI",
