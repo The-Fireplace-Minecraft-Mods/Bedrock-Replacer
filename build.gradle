@@ -16,8 +16,8 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 allprojects {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
 
 curseforge {
@@ -26,7 +26,9 @@ curseforge {
     id = '237108'
     changelog = file('changelog.txt')
     releaseType = 'release'
-	addGameVersion '1.8.9'
+	addGameVersion '1.9'
+	addGameVersion 'Java 8'
+	addGameVersion 'Java 7'
     mainArtifact jar
   }
 }
@@ -36,9 +38,9 @@ group= "the_fireplace.bedrockreplacer"
 archivesBaseName = "BedrockReplacer"
 
 minecraft {
-    version = "1.8.9-11.15.0.1697"
+    version = "1.9-12.16.0.1767-1.9"
     runDir = "run"
-    mappings = "stable_20"
+    mappings = "snapshot_20160312"
 }
 
 dependencies {

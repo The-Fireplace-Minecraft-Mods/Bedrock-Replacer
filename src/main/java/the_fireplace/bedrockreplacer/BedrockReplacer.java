@@ -1,7 +1,7 @@
 package the_fireplace.bedrockreplacer;
 
 import net.minecraft.block.Block;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
@@ -47,9 +47,9 @@ public class BedrockReplacer {
 			VERSION = event.getModMetadata().version;
 		file = new Configuration(event.getSuggestedConfigurationFile());
 		file.load();
-		REPLACEWITH_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.REPLACEWITH_NAME, BRConfigValues.REPLACEWITH_DEFAULT, StatCollector.translateToLocal(BRConfigValues.REPLACEWITH_NAME+".tooltip"));
-		RISKYBLOCKS_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.RISKYBLOCKS_NAME, BRConfigValues.RISKYBLOCKS_DEFAULT, StatCollector.translateToLocal(BRConfigValues.RISKYBLOCKS_NAME+".tooltip"));
-		DIMENSIONS_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.DIMENSIONS_NAME, BRConfigValues.DIMENSIONS_DEFAULT, StatCollector.translateToLocal(BRConfigValues.DIMENSIONS_NAME+".tooltip"));
+		REPLACEWITH_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.REPLACEWITH_NAME, BRConfigValues.REPLACEWITH_DEFAULT, I18n.translateToLocal(BRConfigValues.REPLACEWITH_NAME+".tooltip"));
+		RISKYBLOCKS_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.RISKYBLOCKS_NAME, BRConfigValues.RISKYBLOCKS_DEFAULT, I18n.translateToLocal(BRConfigValues.RISKYBLOCKS_NAME+".tooltip"));
+		DIMENSIONS_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.DIMENSIONS_NAME, BRConfigValues.DIMENSIONS_DEFAULT, I18n.translateToLocal(BRConfigValues.DIMENSIONS_NAME+".tooltip"));
 		if(event.getSide().isClient()){
 			REPLACEWITH_PROPERTY.setConfigEntryClass(BlockList.class);
 			RISKYBLOCKS_PROPERTY.setRequiresMcRestart(true);
@@ -66,11 +66,11 @@ public class BedrockReplacer {
 		Object[] reg = registry.getKeys().toArray();
 		for (Object element : reg) {
 			String id=element.toString();
-			String name=StatCollector.translateToLocal(Block.getBlockFromName(element.toString()).getUnlocalizedName()+".name");
+			String name=I18n.translateToLocal(Block.getBlockFromName(element.toString()).getUnlocalizedName()+".name");
 			if(!name.contains("tile.") && !name.contains(".name"))
 				if(BRConfigValues.RISKYBLOCKS)
 					BlockList.entries.put(id, name);
-				else if(Block.getBlockFromName(id).isOpaqueCube() && Block.getBlockFromName(id).isCollidable() && !Block.getBlockFromName(id).hasTileEntity())
+				else if(Block.getBlockFromName(id).isOpaqueCube(Block.getBlockFromName(id).getDefaultState()) && Block.getBlockFromName(id).isCollidable() && !Block.getBlockFromName(id).hasTileEntity())
 					BlockList.entries.put(id, name);
 		}
 	}
