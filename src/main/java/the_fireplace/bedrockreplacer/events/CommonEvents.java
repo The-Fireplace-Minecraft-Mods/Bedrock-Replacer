@@ -5,20 +5,19 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import the_fireplace.bedrockreplacer.BedrockReplacer;
 import the_fireplace.bedrockreplacer.config.BRConfigValues;
 
-public class ForgeEvents {
+public class CommonEvents {
+	private Block fromBlock = Blocks.bedrock;
 	@SubscribeEvent
 	public void onEvent(PopulateChunkEvent.Pre event)
 	{
 		for(int dim:BRConfigValues.DIMENSIONS)
-			if (event.world.provider.getDimension() == dim)
+			if (event.getWorld().provider.getDimension() == dim)
 				return;
-		Chunk chunk = event.world.getChunkFromChunkCoords(event.chunkX, event.chunkZ);
-		Block fromBlock = Blocks.bedrock;
+		Chunk chunk = event.getWorld().getChunkFromChunkCoords(event.getChunkX(), event.getChunkZ());
+
 		Block toBlock;
 		if(Block.getBlockFromName(BRConfigValues.REPLACEWITH) != null)
 			toBlock = Block.getBlockFromName(BRConfigValues.REPLACEWITH);
@@ -47,11 +46,5 @@ public class ForgeEvents {
 			}
 		}
 		chunk.setModified(true);
-	}
-
-	@SubscribeEvent
-	public void configChanged(ConfigChangedEvent event){
-		if(event.modID.equals(BedrockReplacer.MODID))
-			BedrockReplacer.syncConfig();
 	}
 }

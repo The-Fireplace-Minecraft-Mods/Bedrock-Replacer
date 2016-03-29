@@ -11,6 +11,8 @@
   "credits": "The_Fireplace for authoring",
   "logoFile": "logo.png",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [],
+  "requiredMods": ["Forge@[12.16.0.1805,)"],
+  "useDependencyInformation": true
 }
 ]

@@ -14,7 +14,8 @@ import net.minecraftforge.fml.common.registry.FMLControlledNamespacedRegistry;
 import net.minecraftforge.fml.common.registry.GameData;
 import the_fireplace.bedrockreplacer.config.BRConfigValues;
 import the_fireplace.bedrockreplacer.config.BlockList;
-import the_fireplace.bedrockreplacer.events.ForgeEvents;
+import the_fireplace.bedrockreplacer.events.ClientEvents;
+import the_fireplace.bedrockreplacer.events.CommonEvents;
 
 @Mod(modid=BedrockReplacer.MODID, name=BedrockReplacer.MODNAME, guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated=true)
 public class BedrockReplacer {
@@ -58,7 +59,9 @@ public class BedrockReplacer {
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event){
-		MinecraftForge.EVENT_BUS.register(new ForgeEvents());
+		MinecraftForge.EVENT_BUS.register(new CommonEvents());
+		if(event.getSide().isClient())
+			MinecraftForge.EVENT_BUS.register(new ClientEvents());
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
