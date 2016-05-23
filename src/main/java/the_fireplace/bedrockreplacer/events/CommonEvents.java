@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import the_fireplace.bedrockreplacer.config.BRConfigValues;
 
 public class CommonEvents {
-	private Block fromBlock = Blocks.bedrock;
+	private Block fromBlock = Blocks.BEDROCK;
 	@SubscribeEvent
 	public void onEvent(PopulateChunkEvent.Pre event)
 	{
@@ -22,7 +22,7 @@ public class CommonEvents {
 		if(Block.getBlockFromName(BRConfigValues.REPLACEWITH) != null)
 			toBlock = Block.getBlockFromName(BRConfigValues.REPLACEWITH);
 		else
-			toBlock = Blocks.bedrock;
+			toBlock = Blocks.BEDROCK;
 
 		for (ExtendedBlockStorage storage : chunk.getBlockStorageArray())
 		{
@@ -37,7 +37,7 @@ public class CommonEvents {
 							if(storage.get(x, y, z).equals(fromBlock.getDefaultState()))
 							{
 								storage.set(x, y, z, toBlock.getDefaultState());
-								if(toBlock.equals(Blocks.bedrock))
+								if(toBlock.equals(Blocks.BEDROCK))
 									System.out.println("Bedrock replaced with Bedrock. Either your No Bedrock config is improperly formatted or you have it set to replace Bedrock with Bedrock, which is pointless. Please use the Config GUI to change the settings if possible.");
 							}
 						}
