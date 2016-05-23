@@ -65,16 +65,18 @@ public class BedrockReplacer {
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
-		FMLControlledNamespacedRegistry<Block> registry = GameData.getBlockRegistry();
-		Object[] reg = registry.getKeys().toArray();
-		for (Object element : reg) {
-			String id=element.toString();
-			String name=I18n.translateToLocal(Block.getBlockFromName(element.toString()).getUnlocalizedName()+".name");
-			if(!name.contains("tile.") && !name.contains(".name"))
-				if(BRConfigValues.RISKYBLOCKS)
-					BlockList.entries.put(id, name);
-				else if(Block.getBlockFromName(id).isOpaqueCube(Block.getBlockFromName(id).getDefaultState()) && Block.getBlockFromName(id).isCollidable() && !Block.getBlockFromName(id).hasTileEntity())
-					BlockList.entries.put(id, name);
+		if(event.getSide().isClient()) {
+			FMLControlledNamespacedRegistry<Block> registry = GameData.getBlockRegistry();
+			Object[] reg = registry.getKeys().toArray();
+			for (Object element : reg) {
+				String id = element.toString();
+				String name = I18n.translateToLocal(Block.getBlockFromName(element.toString()).getUnlocalizedName() + ".name");
+				if (!name.contains("tile.") && !name.contains(".name"))
+					if (BRConfigValues.RISKYBLOCKS)
+						BlockList.entries.put(id, name);
+					else if (Block.getBlockFromName(id).getDefaultState().isOpaqueCube() && Block.getBlockFromName(id).isCollidable() && !Block.getBlockFromName(id).hasTileEntity())
+						BlockList.entries.put(id, name);
+			}
 		}
 	}
 }
