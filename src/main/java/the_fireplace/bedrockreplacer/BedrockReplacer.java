@@ -17,12 +17,10 @@ import the_fireplace.bedrockreplacer.config.BlockList;
 import the_fireplace.bedrockreplacer.events.ClientEvents;
 import the_fireplace.bedrockreplacer.events.CommonEvents;
 
-@Mod(modid=BedrockReplacer.MODID, name=BedrockReplacer.MODNAME, guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated=true, updateJSON = "http://caterpillar.bitnamiapp.com/jsons/bedrockreplacer.json")
+@Mod(modid=BedrockReplacer.MODID, name=BedrockReplacer.MODNAME, guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated=true, updateJSON = "http://caterpillar.bitnamiapp.com/jsons/bedrockreplacer.json", acceptedMinecraftVersions = "[1.9.4,1.10.2]")
 public class BedrockReplacer {
 	public static final String MODID = "bedrockreplacer";
 	public static final String MODNAME = "Bedrock Replacer";
-	public static String VERSION;
-	public static final String curseCode = "237108-bedrock-replacer";
 	@Mod.Instance(BedrockReplacer.MODID)
 	public static BedrockReplacer instance;
 
@@ -41,11 +39,6 @@ public class BedrockReplacer {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		String[] version = event.getModMetadata().version.split("\\.");
-		if(version[3].equals("BUILDNUMBER"))//Dev environment
-			VERSION = event.getModMetadata().version.replace("BUILDNUMBER", "9001");
-		else//Released build
-			VERSION = event.getModMetadata().version;
 		file = new Configuration(event.getSuggestedConfigurationFile());
 		file.load();
 		REPLACEWITH_PROPERTY = file.get(Configuration.CATEGORY_GENERAL, BRConfigValues.REPLACEWITH_NAME, BRConfigValues.REPLACEWITH_DEFAULT, I18n.translateToLocal(BRConfigValues.REPLACEWITH_NAME+".tooltip"));
