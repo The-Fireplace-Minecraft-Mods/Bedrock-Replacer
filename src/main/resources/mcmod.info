@@ -3,16 +3,14 @@
   "modid": "bedrockreplacer",
   "name": "Bedrock Replacer",
   "description": "Allows you to replace bedrock in your world with another block such as stone.",
-  "version": "6.0.2.BUILDNUMBER",
-  "mcversion": "",
+  "version": "${version}",
+  "mcversion": "1.11",
   "url": "http://mods.curse.com/mc-mods/minecraft/237108-bedrock-replacer",
   "updateUrl": "http://mods.curse.com/mc-mods/minecraft/237108-bedrock-replacer",
   "authorList": ["The_Fireplace"],
   "credits": "The_Fireplace for authoring",
   "logoFile": "logo.png",
   "screenshots": [],
-  "dependencies": [],
-  "requiredMods": ["Forge@[12.17.0.1909,)"],
-  "useDependencyInformation": true
+  "dependencies": []
 }
 ]

@@ -38,7 +38,7 @@ public class CommonEvents {
 							{
 								storage.set(x, y, z, toBlock.getDefaultState());
 								if(toBlock.equals(Blocks.BEDROCK))
-									System.out.println("Bedrock replaced with Bedrock. Either your No Bedrock config is improperly formatted or you have it set to replace Bedrock with Bedrock, which is pointless. Please use the Config GUI to change the settings if possible.");
+									System.out.println("Bedrock replaced with Bedrock. Either your Bedrock Replacer config is improperly formatted or you have it set to replace Bedrock with Bedrock, which is pointless. Please use the Config GUI to change the settings if possible.");
 							}
 						}
 					}
