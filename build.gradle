@@ -33,10 +33,10 @@ group= "the_fireplace.bedrockreplacer"
 archivesBaseName = "BedrockReplacer-Forge"
 
 minecraft {
-    version = "1.11-13.19.0.2130"
+    version = "1.11-13.19.0.2153"
     runDir = "run"
     replace '${version}', project.version
-    mappings = "snapshot_20161111"
+    mappings = "snapshot_20161119"
 }
 
 dependencies {
