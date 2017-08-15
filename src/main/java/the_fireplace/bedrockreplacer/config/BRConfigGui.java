@@ -9,7 +9,7 @@ import the_fireplace.bedrockreplacer.BedrockReplacer;
 /**
  * @author The_Fireplace
  */
-public class BRConfigGui extends GuiConfig{
+public class BRConfigGui extends GuiConfig {
 	public BRConfigGui(GuiScreen parentScreen) {
 		super(parentScreen,
 				new ConfigElement(BedrockReplacer.file.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), BedrockReplacer.MODID, true,

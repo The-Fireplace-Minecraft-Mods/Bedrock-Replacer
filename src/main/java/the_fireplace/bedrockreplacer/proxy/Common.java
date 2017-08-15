@@ -1,10 +1,12 @@
 package the_fireplace.bedrockreplacer.proxy;
 
+import net.minecraft.util.text.translation.I18n;
+
 /**
  * @author The_Fireplace
  */
 public class Common {
-    public String translateToLocal(String key, Object... args){
-        return key;
-    }
+	public String translateToLocal(String key, Object... args) {
+		return I18n.translateToLocalFormatted(key, args);
+	}
 }

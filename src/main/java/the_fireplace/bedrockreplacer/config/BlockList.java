@@ -1,12 +1,11 @@
 package the_fireplace.bedrockreplacer.config;
 
-import java.util.Map;
-
 import com.google.common.collect.Maps;
-
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.client.config.IConfigElement;
+
+import java.util.Map;
 
 public class BlockList extends GuiConfigEntries.SelectValueEntry {
 	public static Map entries = Maps.newHashMap();

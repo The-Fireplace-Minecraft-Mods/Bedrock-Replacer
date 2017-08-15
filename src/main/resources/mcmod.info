@@ -4,7 +4,7 @@
   "name": "Bedrock Replacer",
   "description": "Allows you to replace bedrock in your world with another block such as stone.",
   "version": "${version}",
-  "mcversion": "1.11",
+  "mcversion": "",
   "url": "http://mods.curse.com/mc-mods/minecraft/237108-bedrock-replacer",
   "updateUrl": "http://mods.curse.com/mc-mods/minecraft/237108-bedrock-replacer",
   "authorList": ["The_Fireplace"],
