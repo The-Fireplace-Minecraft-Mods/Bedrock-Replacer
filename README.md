@@ -1,4 +1,4 @@
-[Fire's Survival Tweaks](https://minecraft.curseforge.com/projects/bedrock-replacer)
+[Bedrock Replacer](https://minecraft.curseforge.com/projects/bedrock-replacer)
 ============================================================================
 
 [![Curse Forge](http://cf.way2muchnoise.eu/short_250836_downloads.svg)](https://minecraft.curseforge.com/projects/bedrock-replacer)
