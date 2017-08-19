@@ -28,7 +28,7 @@ allprojects {
     targetCompatibility = 1.8
 }
 
-version = "7.0.2"
+version = "7.1.0"
 group= "the_fireplace.bedrockreplacer"
 archivesBaseName = "BedrockReplacer-Forge"
 
