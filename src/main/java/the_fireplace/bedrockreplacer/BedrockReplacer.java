@@ -14,7 +14,7 @@ import the_fireplace.bedrockreplacer.config.BRConfigValues;
 import the_fireplace.bedrockreplacer.config.BlockList;
 import the_fireplace.bedrockreplacer.proxy.Common;
 
-@Mod(modid = BedrockReplacer.MODID, name = BedrockReplacer.MODNAME, guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated = true, updateJSON = "http://thefireplace.bitnamiapp.com/jsons/bedrockreplacer.json", acceptedMinecraftVersions = "[1.12,)")
+@Mod(modid = BedrockReplacer.MODID, name = BedrockReplacer.MODNAME, guiFactory = "the_fireplace.bedrockreplacer.config.BRGuiFactory", canBeDeactivated = true, updateJSON = "http://thefireplace.bitnamiapp.com/jsons/bedrockreplacer.json", acceptedMinecraftVersions = "[1.12,)", acceptableRemoteVersions = "*")
 public class BedrockReplacer {
 	public static final String MODID = "bedrockreplacer";
 	public static final String MODNAME = "Bedrock Replacer";
