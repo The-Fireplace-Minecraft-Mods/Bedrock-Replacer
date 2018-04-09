@@ -1,6 +1,10 @@
 replacewith=Replace Bedrock With:
 replacewith.tooltip=The block id to replace Bedrock with.
 riskyblocks=Enable Risky Blocks
-riskyblocks.tooltip=Enables blocks showing in the config that might crash the game if used to replace bedrock.
-disabledindimensions=Disabled in dimensions
-disabledindimensions.tooltip=Which dimension IDs Bedrock Replacer is disabled in.
+riskyblocks.tooltip=Enables using blocks that might crash/lag the game if used to replace bedrock. Enable at your own risk.
+dimension_list=Dimension List
+dimension_list.tooltip=This is the Dimension Black/Whitelist. If it contains *, it is a blacklist. Otherwise, it is a whitelist.
+replacepercent=Replacement Percentage
+replacepercent.tooltip=What percentage of bedrock gets replaced
+multiplychance=Multiply Removal Chance
+multiplychance.tooltip=Multiplies the bedrock removal chance by the block's y-value.

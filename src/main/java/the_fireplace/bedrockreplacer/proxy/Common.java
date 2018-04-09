@@ -9,4 +9,6 @@ public class Common {
 	public String translateToLocal(String key, Object... args) {
 		return I18n.translateToLocalFormatted(key, args);
 	}
+
+	public void initBlockList(){}
 }

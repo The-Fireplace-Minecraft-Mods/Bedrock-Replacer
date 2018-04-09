@@ -1,2 +1,5 @@
-Updated to 1.12/1.12.1
-Updated translation code
+Config Overhaul! You should probably delete your old config.
+"Enable Risky Blocks" is now enforced. If they aren't enabled but the config option is set to a risky block, it will now default to Stone instead.
+You can now choose the chance for each Bedrock block to be replaced. By default, it is set to 100%.
+Along with that comes the ability to increase the chance with the height of the block, effectively "smoothing out" the bedrock layer if the chance isn't 100%.
+The mod can now be run server-side only.

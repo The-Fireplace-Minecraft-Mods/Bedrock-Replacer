@@ -8,7 +8,7 @@ import net.minecraftforge.fml.client.config.IConfigElement;
 import java.util.Map;
 
 public class BlockList extends GuiConfigEntries.SelectValueEntry {
-	public static Map entries = Maps.newHashMap();
+	public static final Map<Object, String> entries = Maps.newHashMap();
 
 	public BlockList(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement configElement) {
 		super(owningScreen, owningEntryList, configElement, entries);
